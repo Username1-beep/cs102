@@ -1,7 +1,7 @@
 import random
 
 
-def is_prime(n):
+def is_prime(n: int) -> bool:
     """
     Tests to see if a number is prime.
 
@@ -21,7 +21,6 @@ def is_prime(n):
             return True
 
     return False
-    pass
 
 
 def gcd(a: int, b: int) -> int:
@@ -35,16 +34,15 @@ def gcd(a: int, b: int) -> int:
     # PUT YOUR CODE HERE
 
     while a != b:
-      if a > b:
-         a = a-b
-      else:
-         b = b - a
+        if a > b:
+            a = a - b
+        else:
+            b = b - a
 
     return b
-    pass
 
 
-def multiplicative_inverse(e, phi):
+def multiplicative_inverse(e: int, phi: int) -> int:
     """
     Euclid's extended algorithm for finding the multiplicative
     inverse of two numbers.
@@ -70,7 +68,6 @@ def multiplicative_inverse(e, phi):
         y = z - y * mass[i]
     phi = y % phi
     return phi
-    pass
 
 
 def generate_keypair(p, q):
